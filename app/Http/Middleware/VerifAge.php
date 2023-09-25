@@ -13,13 +13,13 @@ class VerifAge
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next)
     {
-        $age = $request->input('age'); 
+        // $age = $request->input('age'); 
 
-        if ($age < 18) {
-            return redirect('/'); 
-        }
+        // if ($age < 18) {
+        //     return redirect('/'); 
+        // }
 
         return $next($request);
     }
